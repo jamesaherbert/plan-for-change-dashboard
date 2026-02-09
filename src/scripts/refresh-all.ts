@@ -12,6 +12,7 @@ import { fetchEducationEyfs } from "../lib/fetchers/education";
 import { fetchEnergyTrends } from "../lib/fetchers/energy";
 import { fetchDebates, fetchWrittenQuestions } from "../lib/fetchers/theyworkforyou";
 import { fetchCommitteeInquiries } from "../lib/fetchers/committees";
+import { generateRationales } from "./generate-rationale";
 
 async function main() {
   console.log("=== Plan for Change Dashboard — Data Refresh ===\n");
@@ -144,6 +145,14 @@ async function main() {
     }
   } else {
     console.log("Skipping — GUARDIAN_API_KEY not set");
+  }
+
+  // 8. Generate AI rationale for top outputs (requires ANTHROPIC_API_KEY)
+  console.log("\n--- AI Rationale Generation ---");
+  try {
+    await generateRationales();
+  } catch (err) {
+    console.error("Rationale generation failed:", err);
   }
 
   console.log("\n=== Refresh complete ===");

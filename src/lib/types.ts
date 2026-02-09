@@ -61,6 +61,8 @@ export interface Output {
   department?: string;
   confidence: Confidence;
   dismissed: boolean;
+  rationale?: string;
+  rationaleUpdatedAt?: string;
   // Populated at query time, not stored in the same table
   mediaArticleCount?: number;
   recentMediaCount?: number; // articles in last 7 days

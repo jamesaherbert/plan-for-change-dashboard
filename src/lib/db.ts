@@ -42,6 +42,8 @@ export function initDb(): void {
       department TEXT,
       confidence TEXT NOT NULL DEFAULT 'medium',
       dismissed INTEGER NOT NULL DEFAULT 0,
+      rationale TEXT,
+      rationale_updated_at TEXT,
       fetched_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
 
@@ -113,4 +115,12 @@ export function initDb(): void {
     CREATE INDEX IF NOT EXISTS idx_debates_milestone ON debates(milestone_slug);
     CREATE INDEX IF NOT EXISTS idx_committees_milestone ON committee_inquiries(milestone_slug);
   `);
+
+  // Migration: add rationale columns if missing (for existing DBs)
+  const cols = db.prepare("PRAGMA table_info(outputs)").all() as { name: string }[];
+  const colNames = new Set(cols.map((c) => c.name));
+  if (!colNames.has("rationale")) {
+    db.exec("ALTER TABLE outputs ADD COLUMN rationale TEXT");
+    db.exec("ALTER TABLE outputs ADD COLUMN rationale_updated_at TEXT");
+  }
 }

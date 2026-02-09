@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.74.0",
     "better-sqlite3": "^12.6.2",
     "fast-xml-parser": "^5.3.5",
     "next": "16.1.6",
