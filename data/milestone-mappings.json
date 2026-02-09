@@ -1,0 +1,154 @@
+[
+  {
+    "slug": "economic-growth",
+    "title": "Raising Living Standards",
+    "shortTitle": "Growth",
+    "description": "Raise living standards in every part of the UK, with the highest sustained growth in the G7",
+    "target": {
+      "value": 0,
+      "unit": "index",
+      "date": "Spring 2029",
+      "higherIsBetter": true,
+      "kpiLabel": "RHDI per head index"
+    },
+    "departments": [
+      "hm-treasury",
+      "department-for-business-and-trade"
+    ],
+    "govukSearchTerms": ["economic growth", "living standards", "household income", "productivity", "industrial strategy"],
+    "govukDocTypes": ["policy_paper", "consultation", "guidance", "government_response", "impact_assessment"],
+    "billSearchTerms": ["economy", "trade", "investment", "industrial strategy", "growth"],
+    "billExcludeTerms": [],
+    "committeeIds": [158],
+    "debateSearchTerms": ["economic growth", "living standards", "GDP", "household income", "productivity"],
+    "guardianTags": ["business/economics", "politics/economy"],
+    "guardianSearchTerms": ["UK economic growth", "living standards", "household income", "G7 growth"],
+    "legislationSearchTerms": ["trade", "investment", "enterprise"]
+  },
+  {
+    "slug": "housing",
+    "title": "1.5 Million Homes & Infrastructure",
+    "shortTitle": "Housing",
+    "description": "Build 1.5 million homes in England and fast-track planning decisions on at least 150 major infrastructure projects",
+    "target": {
+      "value": 1500000,
+      "unit": "homes",
+      "date": "Spring 2029",
+      "higherIsBetter": true,
+      "kpiLabel": "Net additional dwellings"
+    },
+    "departments": [
+      "ministry-of-housing-communities-and-local-government",
+      "department-for-levelling-up-housing-and-communities"
+    ],
+    "govukSearchTerms": ["housing", "planning", "infrastructure", "housebuilding", "NPPF", "planning reform", "new homes"],
+    "govukDocTypes": ["policy_paper", "consultation", "guidance", "government_response", "impact_assessment"],
+    "billSearchTerms": ["planning", "housing", "infrastructure", "building safety", "leasehold", "renters"],
+    "billExcludeTerms": ["animal housing"],
+    "committeeIds": [17],
+    "debateSearchTerms": ["housing supply", "planning reform", "housebuilding", "NPPF", "1.5 million homes", "new homes"],
+    "guardianTags": ["society/housing", "money/housebuilding", "society/planning"],
+    "guardianSearchTerms": ["housing target", "1.5 million homes", "planning reform", "NPPF", "housebuilding"],
+    "legislationSearchTerms": ["planning", "housing", "building", "leasehold"]
+  },
+  {
+    "slug": "nhs",
+    "title": "NHS Waiting Times",
+    "shortTitle": "NHS",
+    "description": "Meet the NHS standard of 92% of patients in England waiting no longer than 18 weeks for elective treatment",
+    "target": {
+      "value": 92,
+      "unit": "%",
+      "date": "Spring 2029",
+      "higherIsBetter": true,
+      "kpiLabel": "% within 18 weeks RTT"
+    },
+    "departments": [
+      "department-of-health-and-social-care"
+    ],
+    "govukSearchTerms": ["NHS", "waiting times", "elective care", "hospital", "health service", "NHS reform"],
+    "govukDocTypes": ["policy_paper", "consultation", "guidance", "government_response", "impact_assessment"],
+    "billSearchTerms": ["NHS", "health", "care", "hospital", "mental health"],
+    "billExcludeTerms": ["animal health"],
+    "committeeIds": [81],
+    "debateSearchTerms": ["NHS waiting", "hospital waiting", "elective care", "18 weeks", "referral to treatment", "NHS backlog"],
+    "guardianTags": ["society/nhs", "society/health"],
+    "guardianSearchTerms": ["NHS waiting times", "NHS backlog", "elective care", "hospital waiting list"],
+    "legislationSearchTerms": ["health service", "NHS", "care"]
+  },
+  {
+    "slug": "policing",
+    "title": "Neighbourhood Policing",
+    "shortTitle": "Policing",
+    "description": "Put 13,000 additional police officers, PCSOs and special constables into neighbourhood policing",
+    "target": {
+      "value": 13000,
+      "unit": "additional officers",
+      "date": "Spring 2029",
+      "higherIsBetter": true,
+      "kpiLabel": "Additional neighbourhood police"
+    },
+    "departments": [
+      "home-office"
+    ],
+    "govukSearchTerms": ["neighbourhood policing", "police", "crime", "antisocial behaviour", "safer streets"],
+    "govukDocTypes": ["policy_paper", "consultation", "guidance", "government_response", "impact_assessment"],
+    "billSearchTerms": ["police", "crime", "criminal justice", "antisocial behaviour", "public order"],
+    "billExcludeTerms": [],
+    "committeeIds": [83],
+    "debateSearchTerms": ["neighbourhood policing", "police recruitment", "police officers", "crime", "antisocial behaviour"],
+    "guardianTags": ["uk/police", "uk/ukcrime"],
+    "guardianSearchTerms": ["neighbourhood policing", "police recruitment", "13000 police", "police officers neighbourhood"],
+    "legislationSearchTerms": ["police", "crime", "criminal justice"]
+  },
+  {
+    "slug": "education",
+    "title": "School Readiness",
+    "shortTitle": "Education",
+    "description": "75% of five-year-olds in England ready to learn when they start school",
+    "target": {
+      "value": 75,
+      "unit": "%",
+      "date": "2028",
+      "higherIsBetter": true,
+      "kpiLabel": "% achieving good level of development"
+    },
+    "departments": [
+      "department-for-education"
+    ],
+    "govukSearchTerms": ["early years", "school readiness", "childcare", "nursery", "EYFS", "foundation stage", "early education"],
+    "govukDocTypes": ["policy_paper", "consultation", "guidance", "government_response", "impact_assessment"],
+    "billSearchTerms": ["education", "childcare", "early years", "children", "schools"],
+    "billExcludeTerms": [],
+    "committeeIds": [203],
+    "debateSearchTerms": ["school readiness", "early years", "five year olds", "EYFS", "childcare", "nursery"],
+    "guardianTags": ["education/earlyyearseducation", "education/schools"],
+    "guardianSearchTerms": ["school readiness", "early years education", "five year olds ready to learn", "EYFS", "childcare expansion"],
+    "legislationSearchTerms": ["education", "childcare", "children"]
+  },
+  {
+    "slug": "clean-energy",
+    "title": "Clean Power 2030",
+    "shortTitle": "Energy",
+    "description": "Put the UK on track to generate at least 95% clean power by 2030",
+    "target": {
+      "value": 95,
+      "unit": "% clean power",
+      "date": "2030",
+      "higherIsBetter": true,
+      "kpiLabel": "% electricity from clean sources"
+    },
+    "departments": [
+      "department-for-energy-security-and-net-zero"
+    ],
+    "govukSearchTerms": ["clean power", "renewable energy", "net zero", "offshore wind", "solar", "nuclear", "clean energy", "energy security"],
+    "govukDocTypes": ["policy_paper", "consultation", "guidance", "government_response", "impact_assessment"],
+    "billSearchTerms": ["energy", "renewable", "nuclear", "net zero", "climate", "wind", "solar"],
+    "billExcludeTerms": [],
+    "committeeIds": [365],
+    "debateSearchTerms": ["clean power", "renewable energy", "offshore wind", "solar power", "net zero", "clean energy 2030"],
+    "guardianTags": ["environment/energy", "environment/renewableenergy", "environment/windpower"],
+    "guardianSearchTerms": ["clean power 2030", "UK renewable energy", "offshore wind", "clean energy target", "95% clean power"],
+    "legislationSearchTerms": ["energy", "renewable", "nuclear", "electricity"]
+  }
+]
