@@ -13,6 +13,7 @@ import { fetchEnergyTrends } from "../lib/fetchers/energy";
 import { fetchDebates, fetchWrittenQuestions } from "../lib/fetchers/theyworkforyou";
 import { fetchCommitteeInquiries } from "../lib/fetchers/committees";
 import { generateRationales } from "./generate-rationale";
+import { generateBriefings } from "./generate-briefings";
 
 async function main() {
   console.log("=== Plan for Change Dashboard — Data Refresh ===\n");
@@ -153,6 +154,14 @@ async function main() {
     await generateRationales();
   } catch (err) {
     console.error("Rationale generation failed:", err);
+  }
+
+  // 9. Generate AI milestone briefings (requires ANTHROPIC_API_KEY)
+  console.log("\n--- AI Milestone Briefings ---");
+  try {
+    await generateBriefings();
+  } catch (err) {
+    console.error("Briefing generation failed:", err);
   }
 
   console.log("\n=== Refresh complete ===");

@@ -17,6 +17,7 @@ import Collapsible from "@/components/ui/Collapsible";
 import ArticleCard from "@/components/media/ArticleCard";
 import DebateItem from "@/components/parliamentary/DebateItem";
 import CommitteeCard from "@/components/parliamentary/CommitteeCard";
+import MilestoneBriefing from "@/components/milestone/MilestoneBriefing";
 
 export function generateStaticParams() {
   return MILESTONE_SLUGS.map((slug) => ({ slug }));
@@ -61,6 +62,11 @@ export default async function MilestonePage({
 
   const kpiHistory = queryDb<KpiSnapshot>(
     "SELECT milestone_slug as milestoneSlug, value, date, label, fetched_at as fetchedAt FROM kpi_snapshots WHERE milestone_slug = ? ORDER BY date ASC",
+    slug
+  );
+
+  const briefing = queryOne<{ content: string; generatedAt: string }>(
+    "SELECT content, generated_at as generatedAt FROM milestone_briefings WHERE milestone_slug = ?",
     slug
   );
 
@@ -192,6 +198,16 @@ export default async function MilestonePage({
     <div className="p-6 max-w-5xl">
       {/* Panel 1: KPI Status */}
       <KpiDetail milestone={milestone} kpiHistory={kpiHistory} />
+
+      {/* AI Briefing */}
+      {briefing && (
+        <div className="mt-6">
+          <MilestoneBriefing
+            content={briefing.content}
+            generatedAt={briefing.generatedAt}
+          />
+        </div>
+      )}
 
       {/* Key Outputs Panel — full width below KPI */}
       {keyOutputs.length > 0 && (

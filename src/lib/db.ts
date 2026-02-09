@@ -112,6 +112,13 @@ export function initDb(): void {
     CREATE INDEX IF NOT EXISTS idx_media_milestone ON media_articles(milestone_slug);
     CREATE INDEX IF NOT EXISTS idx_media_output ON media_articles(output_id);
     CREATE INDEX IF NOT EXISTS idx_media_date ON media_articles(published_date);
+    CREATE TABLE IF NOT EXISTS milestone_briefings (
+      milestone_slug TEXT PRIMARY KEY,
+      content TEXT NOT NULL,
+      data_hash TEXT NOT NULL,
+      generated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
     CREATE INDEX IF NOT EXISTS idx_debates_milestone ON debates(milestone_slug);
     CREATE INDEX IF NOT EXISTS idx_committees_milestone ON committee_inquiries(milestone_slug);
   `);
