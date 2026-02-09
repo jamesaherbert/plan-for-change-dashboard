@@ -30,7 +30,7 @@ jobs:
       - run: npm ci
 
       - name: Fetch data
-        run: npx tsx src/scripts/refresh-all.ts
+        run: mkdir -p data/cache && npx tsx src/scripts/refresh-all.ts || echo "Some data fetches failed (non-fatal)"
 
       - name: Build static site
         env:
