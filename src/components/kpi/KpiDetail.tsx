@@ -35,6 +35,25 @@ function shouldShowTrafficLight(milestone: Milestone): boolean {
   return milestone.slug !== "policing" && milestone.slug !== "economic-growth";
 }
 
+/**
+ * Get target value for the sparkline reference line.
+ * Only show for milestones where the KPI and target are directly comparable.
+ */
+function getSparklineTarget(milestone: Milestone): number | undefined {
+  switch (milestone.slug) {
+    case "nhs":
+    case "education":
+    case "clean-energy":
+      return milestone.targetValue > 0 ? milestone.targetValue : undefined;
+    case "housing":
+      // KPI is annual supply; target rate is 300k/yr
+      return milestone.targetValue > 0 ? Math.round(milestone.targetValue / 5) : undefined;
+    default:
+      // economic-growth (comparative), policing (additional vs total) — not comparable
+      return undefined;
+  }
+}
+
 export default function KpiDetail({ milestone, kpiHistory }: KpiDetailProps) {
   const latest = kpiHistory.length > 0 ? kpiHistory[kpiHistory.length - 1] : null;
   const hasData = latest !== null;
@@ -61,7 +80,12 @@ export default function KpiDetail({ milestone, kpiHistory }: KpiDetailProps) {
       </div>
 
       <div className="mb-4">
-        <SparklineChart data={kpiHistory} height={100} showTooltip />
+        <SparklineChart
+          data={kpiHistory}
+          height={100}
+          showTooltip
+          targetValue={getSparklineTarget(milestone)}
+        />
       </div>
 
       <div className="flex items-end justify-between">

@@ -1,0 +1,515 @@
+[
+  {
+    "slug": "economic-growth",
+    "documentSource": "Plan for Change, December 2024",
+    "baseline": {
+      "description": "UK economy recovering from multiple shocks; living standards under pressure with RHDI per head below pre-pandemic peak",
+      "date": "December 2024",
+      "metrics": [
+        {
+          "label": "RHDI per head index",
+          "value": null,
+          "unit": "index",
+          "note": "Comparative G7 measure — target is highest sustained growth, not a specific numeric target"
+        }
+      ]
+    },
+    "target": {
+      "description": "Raise living standards in every part of the UK, with the highest sustained growth in the G7",
+      "value": null,
+      "unit": "comparative",
+      "date": "Spring 2029",
+      "note": "Comparative target — no single numeric threshold; measured via RHDI per head, GDP per capita, and regional GDP per head"
+    },
+    "requiredTrajectory": {
+      "description": "UK GDP growth must consistently exceed other G7 economies (US, Japan, Germany, France, Italy, Canada) over the parliament",
+      "annualRateNeeded": null,
+      "note": "Depends on relative G7 performance — sustained outperformance required rather than a fixed annual rate"
+    },
+    "mission": "Kickstart economic growth",
+    "theoryOfChange": "Economic stability combined with investment in infrastructure, planning reform, industrial strategy, skills, trade, innovation and the net zero transition will unlock private investment and raise productivity, leading to sustained growth that outpaces G7 peers and raises living standards across all UK regions.",
+    "pillars": [
+      "Stability",
+      "Investment, infrastructure & planning",
+      "Place-based growth",
+      "People & skills",
+      "Industrial strategy & trade",
+      "Innovation",
+      "Net zero"
+    ],
+    "deliverables": [
+      {
+        "id": "eg-01",
+        "commitment": "Publish a 10-year Industrial Strategy",
+        "expectedDate": "2025",
+        "category": "strategy",
+        "searchTerms": ["industrial strategy", "10-year industrial"]
+      },
+      {
+        "id": "eg-02",
+        "commitment": "National Wealth Fund to crowd in up to £70bn private investment",
+        "expectedDate": "ongoing",
+        "category": "investment",
+        "searchTerms": ["national wealth fund", "NWF"]
+      },
+      {
+        "id": "eg-03",
+        "commitment": "Establish Skills England",
+        "expectedDate": "2025",
+        "category": "skills",
+        "searchTerms": ["skills england"]
+      },
+      {
+        "id": "eg-04",
+        "commitment": "Get Britain Working White Paper",
+        "expectedDate": "2025",
+        "category": "employment",
+        "searchTerms": ["get britain working"]
+      },
+      {
+        "id": "eg-05",
+        "commitment": "Reform the Office for Investment",
+        "expectedDate": "2025",
+        "category": "investment",
+        "searchTerms": ["office for investment"]
+      },
+      {
+        "id": "eg-06",
+        "commitment": "AI Opportunities Action Plan",
+        "expectedDate": "2025",
+        "category": "innovation",
+        "searchTerms": ["AI opportunities action plan", "AI action plan"]
+      }
+    ]
+  },
+  {
+    "slug": "housing",
+    "documentSource": "Plan for Change, December 2024",
+    "baseline": {
+      "description": "England building approximately 220,000-240,000 net additional dwellings per year, well below the 300,000/yr rate needed",
+      "date": "2023-24",
+      "metrics": [
+        {
+          "label": "Net additional dwellings (annual)",
+          "value": 234000,
+          "unit": "homes",
+          "note": "Approximate recent annual figure"
+        }
+      ]
+    },
+    "target": {
+      "description": "Build 1.5 million new homes in England and fast-track planning decisions on at least 150 major infrastructure projects",
+      "value": 1500000,
+      "unit": "homes",
+      "date": "Spring 2029",
+      "note": "Cumulative over 5-year parliament; also 150 infrastructure planning decisions"
+    },
+    "requiredTrajectory": {
+      "description": "300,000 net additional dwellings per year on average, with the document noting a significant ramp-up expected in year 3 of parliament as planning reforms take effect",
+      "annualRateNeeded": 300000,
+      "note": "Front-loaded policy reforms expected to yield results from ~2027 onwards"
+    },
+    "mission": "Get Britain building again",
+    "theoryOfChange": "Mandatory housing targets through the revised NPPF and the Planning and Infrastructure Bill remove the binding constraint on housebuilding. Combined with £3.1bn affordable homes funding, new towns, infrastructure acceleration, and construction workforce expansion, housing supply can scale to 300,000 homes per year.",
+    "pillars": [
+      "Planning reform",
+      "Affordable homes investment",
+      "New towns",
+      "Infrastructure acceleration",
+      "Workforce expansion"
+    ],
+    "deliverables": [
+      {
+        "id": "ho-01",
+        "commitment": "Publish revised NPPF with mandatory housing targets",
+        "expectedDate": "end 2024",
+        "category": "planning",
+        "searchTerms": ["NPPF", "national planning policy framework", "planning policy framework"]
+      },
+      {
+        "id": "ho-02",
+        "commitment": "Update National Policy Statements for major infrastructure",
+        "expectedDate": "summer 2025",
+        "category": "planning",
+        "searchTerms": ["national policy statements", "national policy statement", "NPS"]
+      },
+      {
+        "id": "ho-03",
+        "commitment": "Planning and Infrastructure Bill",
+        "expectedDate": "2025",
+        "category": "legislation",
+        "searchTerms": ["planning and infrastructure bill"]
+      },
+      {
+        "id": "ho-04",
+        "commitment": "Publish a 10-year housing strategy",
+        "expectedDate": "2025-26",
+        "category": "strategy",
+        "searchTerms": ["10-year housing strategy", "long-term housing plan", "housing strategy"]
+      },
+      {
+        "id": "ho-05",
+        "commitment": "Publish a 10-year infrastructure strategy",
+        "expectedDate": "2025-26",
+        "category": "strategy",
+        "searchTerms": ["10-year infrastructure strategy", "infrastructure strategy", "long-term infrastructure"]
+      },
+      {
+        "id": "ho-06",
+        "commitment": "£500M additional Affordable Homes Programme funding (£3.1bn total per year)",
+        "expectedDate": "2025-26",
+        "category": "funding",
+        "searchTerms": ["affordable homes programme", "AHP", "affordable homes"]
+      },
+      {
+        "id": "ho-07",
+        "commitment": "Next-generation new towns programme",
+        "expectedDate": "2025-26",
+        "category": "new-towns",
+        "searchTerms": ["new towns", "next-generation new towns", "new town"]
+      },
+      {
+        "id": "ho-08",
+        "commitment": "Construction workforce expansion plan",
+        "expectedDate": "2025",
+        "category": "workforce",
+        "searchTerms": ["construction workforce", "building workforce", "construction skills"]
+      },
+      {
+        "id": "ho-09",
+        "commitment": "Fast-track 150 major infrastructure planning decisions",
+        "expectedDate": "Spring 2029",
+        "category": "infrastructure",
+        "searchTerms": ["150 major infrastructure", "infrastructure planning decisions", "major infrastructure"]
+      }
+    ]
+  },
+  {
+    "slug": "nhs",
+    "documentSource": "Plan for Change, December 2024",
+    "baseline": {
+      "description": "7.6 million people on the NHS waiting list, with over 3 million waiting more than 18 weeks for treatment (September 2024)",
+      "date": "September 2024",
+      "metrics": [
+        {
+          "label": "Total waiting list",
+          "value": 7600000,
+          "unit": "patients",
+          "note": "As of September 2024"
+        },
+        {
+          "label": "Waiting 18+ weeks",
+          "value": 3000000,
+          "unit": "patients",
+          "note": "Over 3 million"
+        }
+      ]
+    },
+    "target": {
+      "description": "Meet the NHS standard of 92% of patients waiting no longer than 18 weeks from referral to treatment",
+      "value": 92,
+      "unit": "%",
+      "date": "Spring 2029",
+      "note": "NHS constitutional standard; requires clearing millions from the backlog"
+    },
+    "requiredTrajectory": {
+      "description": "From approximately 57% within 18 weeks to 92%, requiring roughly 7 percentage points improvement per year, plus 2 million additional operations, scans and appointments annually (40,000 per week)",
+      "annualRateNeeded": 7,
+      "note": "~7 percentage points per year; 40,000 additional appointments per week above current levels"
+    },
+    "mission": "Get the NHS back on its feet",
+    "theoryOfChange": "Immediate capacity expansion through 40,000 extra appointments per week reduces the backlog. Structural reforms — shifting care from hospitals to the community, from analogue to digital systems, and from treating sickness to prevention — sustainably reduce demand growth and increase throughput. The 10-Year Health Plan provides the reform blueprint.",
+    "pillars": [
+      "Capacity expansion",
+      "Hospital to community shift",
+      "Analogue to digital",
+      "Sickness to prevention"
+    ],
+    "deliverables": [
+      {
+        "id": "nh-01",
+        "commitment": "Deliver 2 million additional operations, scans and appointments per year (40,000 per week)",
+        "expectedDate": "ongoing from 2025",
+        "category": "capacity",
+        "searchTerms": ["2 million additional", "40,000 appointments", "extra appointments", "additional operations"]
+      },
+      {
+        "id": "nh-02",
+        "commitment": "Publish 10-Year Health Plan",
+        "expectedDate": "spring 2025",
+        "category": "strategy",
+        "searchTerms": ["10-year health plan", "ten year health plan", "10 year health plan"]
+      },
+      {
+        "id": "nh-03",
+        "commitment": "Build new surgical hubs",
+        "expectedDate": "2025-2029",
+        "category": "infrastructure",
+        "searchTerms": ["surgical hubs", "surgical hub", "elective surgical"]
+      },
+      {
+        "id": "nh-04",
+        "commitment": "Deploy additional diagnostic scanners",
+        "expectedDate": "2025-2029",
+        "category": "infrastructure",
+        "searchTerms": ["diagnostic scanners", "community diagnostic", "diagnostic centres"]
+      },
+      {
+        "id": "nh-05",
+        "commitment": "Three reform shifts: hospital to community, analogue to digital, sickness to prevention",
+        "expectedDate": "ongoing",
+        "category": "reform",
+        "searchTerms": ["hospital to community", "analogue to digital", "sickness to prevention", "three shifts"]
+      }
+    ]
+  },
+  {
+    "slug": "policing",
+    "documentSource": "Plan for Change, December 2024",
+    "baseline": {
+      "description": "Neighbourhood policing significantly depleted after years of cuts; neighbourhood officer numbers at historic lows",
+      "date": "2024",
+      "metrics": [
+        {
+          "label": "Police workforce (FTE)",
+          "value": null,
+          "unit": "officers",
+          "note": "Baseline neighbourhood policing numbers to be precisely established; overall police workforce data tracked via Home Office statistics"
+        }
+      ]
+    },
+    "target": {
+      "description": "Put 13,000 additional police officers, PCSOs and special constables into neighbourhood policing roles",
+      "value": 13000,
+      "unit": "additional officers",
+      "date": "Spring 2029",
+      "note": "Net additional to neighbourhood policing specifically"
+    },
+    "requiredTrajectory": {
+      "description": "Approximately 2,600 additional neighbourhood officers per year across the parliament, requiring sustained recruitment, training and redeployment",
+      "annualRateNeeded": 2600,
+      "note": "13,000 over 5 years = ~2,600 per year"
+    },
+    "mission": "Take back our streets",
+    "theoryOfChange": "The Neighbourhood Policing Guarantee provides the mandate and funding model for dedicated neighbourhood officers. Named contactable officers per neighbourhood rebuild public trust. A new career pathway attracts and retains recruits. Respect Orders and the Police Performance Unit ensure antisocial behaviour outcomes improve alongside officer numbers.",
+    "pillars": [
+      "Neighbourhood Policing Guarantee",
+      "Accountability & performance",
+      "Career development",
+      "Antisocial behaviour enforcement"
+    ],
+    "deliverables": [
+      {
+        "id": "po-01",
+        "commitment": "Neighbourhood Policing Guarantee",
+        "expectedDate": "2025",
+        "category": "policy",
+        "searchTerms": ["neighbourhood policing guarantee"]
+      },
+      {
+        "id": "po-02",
+        "commitment": "Named, contactable officer for every neighbourhood",
+        "expectedDate": "2025-2029",
+        "category": "operational",
+        "searchTerms": ["named officer", "contactable officer", "neighbourhood officer"]
+      },
+      {
+        "id": "po-03",
+        "commitment": "Establish Police and Crime Performance Unit",
+        "expectedDate": "2025",
+        "category": "accountability",
+        "searchTerms": ["police performance unit", "crime performance unit", "police and crime performance"]
+      },
+      {
+        "id": "po-04",
+        "commitment": "New career pathway for neighbourhood policing",
+        "expectedDate": "2025-26",
+        "category": "workforce",
+        "searchTerms": ["career pathway", "neighbourhood policing career", "police career"]
+      },
+      {
+        "id": "po-05",
+        "commitment": "Introduce Respect Orders for antisocial behaviour",
+        "expectedDate": "2025",
+        "category": "legislation",
+        "searchTerms": ["respect orders", "respect order", "antisocial behaviour order"]
+      }
+    ]
+  },
+  {
+    "slug": "education",
+    "documentSource": "Plan for Change, December 2024",
+    "baseline": {
+      "description": "67.7% of five-year-olds achieving a good level of development on the Early Years Foundation Stage (EYFS) profile",
+      "date": "2023-24",
+      "metrics": [
+        {
+          "label": "% achieving good level of development",
+          "value": 67.7,
+          "unit": "%",
+          "note": "EYFS profile result 2023-24"
+        },
+        {
+          "label": "Additional children needed per year",
+          "value": 42500,
+          "unit": "children",
+          "note": "40,000-45,000 additional children per year need to reach GLD"
+        }
+      ]
+    },
+    "target": {
+      "description": "75% of five-year-olds in England school-ready, as measured by the EYFS good level of development",
+      "value": 75,
+      "unit": "%",
+      "date": "2028",
+      "note": "Requires 40,000-45,000 additional children per year reaching good level of development"
+    },
+    "requiredTrajectory": {
+      "description": "From 67.7% to 75% by 2028 requires roughly 1.8 percentage points improvement per year over 4 years, equivalent to 40,000-45,000 additional children reaching the threshold annually",
+      "annualRateNeeded": 1.8,
+      "note": "~1.8pp per year; 40,000-45,000 additional children reaching GLD each year"
+    },
+    "mission": "Break down barriers to opportunity",
+    "theoryOfChange": "Expanding funded childcare hours and building 3,000 school-based nurseries increases access to quality early education for disadvantaged children. Recruiting 6,500 extra teachers reduces ratios. Family Hubs and Start for Life, combined with evidence-based early literacy programmes, support the most disadvantaged children and lift the overall EYFS pass rate to 75%.",
+    "pillars": [
+      "Childcare expansion",
+      "Nursery provision",
+      "Teacher recruitment",
+      "Family support",
+      "Evidence-based programmes"
+    ],
+    "deliverables": [
+      {
+        "id": "ed-01",
+        "commitment": "Expand to 30 funded childcare hours for working parents",
+        "expectedDate": "2025-2026",
+        "category": "childcare",
+        "searchTerms": ["30 hours childcare", "funded childcare", "childcare expansion", "30 funded hours"]
+      },
+      {
+        "id": "ed-02",
+        "commitment": "Open 3,000 new school-based nurseries",
+        "expectedDate": "2025-2029",
+        "category": "nurseries",
+        "searchTerms": ["school-based nurseries", "3,000 nurseries", "school nurseries", "3000 nurseries"]
+      },
+      {
+        "id": "ed-03",
+        "commitment": "Recruit 6,500 extra teachers",
+        "expectedDate": "2025-2029",
+        "category": "workforce",
+        "searchTerms": ["6,500 teachers", "6500 teachers", "extra teachers", "teacher recruitment"]
+      },
+      {
+        "id": "ed-04",
+        "commitment": "Expand Family Hubs and Start for Life programme",
+        "expectedDate": "ongoing",
+        "category": "family-support",
+        "searchTerms": ["family hubs", "start for life", "family hub"]
+      },
+      {
+        "id": "ed-05",
+        "commitment": "Evidence-based early literacy programmes",
+        "expectedDate": "2025-2029",
+        "category": "education",
+        "searchTerms": ["early literacy", "literacy programme", "early reading", "phonics"]
+      }
+    ]
+  },
+  {
+    "slug": "clean-energy",
+    "documentSource": "Plan for Change, December 2024",
+    "baseline": {
+      "description": "UK generating approximately 55-60% of electricity from clean sources (renewables plus nuclear), varying by quarter",
+      "date": "2024",
+      "metrics": [
+        {
+          "label": "% electricity from clean sources",
+          "value": null,
+          "unit": "%",
+          "note": "Varies quarterly; includes renewables + nuclear. Approximately 55-60% in recent periods"
+        }
+      ]
+    },
+    "target": {
+      "description": "Generate at least 95% of electricity from clean power by 2030",
+      "value": 95,
+      "unit": "% clean power",
+      "date": "2030",
+      "note": "Clean = renewables + nuclear; requires near-complete decarbonisation of electricity generation"
+    },
+    "requiredTrajectory": {
+      "description": "From approximately 57% clean power to 95% by 2030 requires roughly 6-7 percentage points improvement per year, driven by massive expansion of offshore wind, solar, and grid infrastructure",
+      "annualRateNeeded": 6.5,
+      "note": "Massive acceleration of renewable capacity build-out and grid modernisation needed"
+    },
+    "mission": "Make Britain a clean energy superpower",
+    "theoryOfChange": "Great British Energy provides public investment vehicle. Lifting the onshore wind ban and record renewables auction rounds accelerate deployment. Planning reform for energy infrastructure and grid building removes bottlenecks. £21.7bn carbon capture investment and the Warm Homes Plan reduce reliance on fossil fuels. The Clean Power 2030 Action Plan provides the detailed delivery pathway.",
+    "pillars": [
+      "Great British Energy",
+      "Onshore wind",
+      "Offshore wind & solar",
+      "Grid modernisation",
+      "Carbon capture",
+      "Warm Homes"
+    ],
+    "deliverables": [
+      {
+        "id": "ce-01",
+        "commitment": "Establish Great British Energy (headquarters in Aberdeen)",
+        "expectedDate": "2025",
+        "category": "institution",
+        "searchTerms": ["great british energy", "GB energy", "british energy"]
+      },
+      {
+        "id": "ce-02",
+        "commitment": "Lift the onshore wind ban",
+        "expectedDate": "2024-25",
+        "category": "planning",
+        "searchTerms": ["onshore wind ban", "onshore wind", "wind moratorium"]
+      },
+      {
+        "id": "ce-03",
+        "commitment": "Record renewables auction round",
+        "expectedDate": "2025",
+        "category": "procurement",
+        "searchTerms": ["renewables auction", "CfD auction", "allocation round", "contracts for difference"]
+      },
+      {
+        "id": "ce-04",
+        "commitment": "Clean Power 2030 Action Plan",
+        "expectedDate": "2025",
+        "category": "strategy",
+        "searchTerms": ["clean power 2030 action plan", "clean power 2030", "clean power action plan"]
+      },
+      {
+        "id": "ce-05",
+        "commitment": "Planning reform for energy infrastructure and grid building",
+        "expectedDate": "2025",
+        "category": "planning",
+        "searchTerms": ["energy planning reform", "grid planning", "energy infrastructure planning", "grid connection"]
+      },
+      {
+        "id": "ce-06",
+        "commitment": "£21.7bn carbon capture investment commitment",
+        "expectedDate": "2025-2030",
+        "category": "investment",
+        "searchTerms": ["carbon capture", "CCUS", "CCS", "carbon capture and storage"]
+      },
+      {
+        "id": "ce-07",
+        "commitment": "Warm Homes Plan for energy efficiency",
+        "expectedDate": "2025",
+        "category": "efficiency",
+        "searchTerms": ["warm homes plan", "warm homes", "home insulation", "energy efficiency homes"]
+      },
+      {
+        "id": "ce-08",
+        "commitment": "Electric vehicle charging infrastructure investment",
+        "expectedDate": "2025-2030",
+        "category": "transport",
+        "searchTerms": ["EV charging", "electric vehicle charging", "charge point", "charging infrastructure"]
+      }
+    ]
+  }
+]

@@ -1,7 +1,9 @@
 import { getAllMilestones } from "@/lib/milestones";
 import { initDb, getDb } from "@/lib/db";
 import KpiCard from "@/components/kpi/KpiCard";
-import type { KpiSnapshot } from "@/lib/types";
+import type { KpiSnapshot, Output, MediaArticle, MilestoneSlug } from "@/lib/types";
+import { getMEFramework } from "@/lib/me-framework";
+import { enrichDeliverables } from "@/lib/me-matching";
 
 function getKpiHistory(milestoneSlug: string): KpiSnapshot[] {
   try {
@@ -13,6 +15,41 @@ function getKpiHistory(milestoneSlug: string): KpiSnapshot[] {
       .all(milestoneSlug) as KpiSnapshot[];
   } catch {
     return [];
+  }
+}
+
+function getMESummary(milestoneSlug: string): { delivered: number; total: number; atRisk: number } | undefined {
+  const framework = getMEFramework(milestoneSlug as MilestoneSlug);
+  if (!framework) return undefined;
+
+  try {
+    const db = getDb();
+    const outputs = db
+      .prepare(
+        `SELECT id, milestone_slug as milestoneSlug, type, title, description, url, source, status,
+         published_date as publishedDate, last_updated as lastUpdated, department, confidence, dismissed,
+         rationale, rationale_updated_at as rationaleUpdatedAt
+         FROM outputs WHERE milestone_slug = ? AND dismissed = 0`
+      )
+      .all(milestoneSlug) as Output[];
+
+    const media = db
+      .prepare(
+        `SELECT id, milestone_slug as milestoneSlug, output_id as outputId, title, url, source,
+         published_date as publishedDate, excerpt, thumbnail_url as thumbnailUrl,
+         api_source as apiSource, fetched_at as fetchedAt
+         FROM media_articles WHERE milestone_slug = ? ORDER BY published_date DESC LIMIT 50`
+      )
+      .all(milestoneSlug) as MediaArticle[];
+
+    const view = enrichDeliverables(framework, outputs, media);
+    return {
+      delivered: view.deliveredCount,
+      total: view.enrichedDeliverables.length,
+      atRisk: view.atRiskCount,
+    };
+  } catch {
+    return undefined;
   }
 }
 
@@ -70,6 +107,7 @@ export default function OverviewPage() {
               ? kpiHistory[kpiHistory.length - 1]
               : undefined;
           const stats = getOverviewStats(milestone.slug);
+          const meSummary = getMESummary(milestone.slug);
 
           return (
             <KpiCard
@@ -79,6 +117,7 @@ export default function OverviewPage() {
               kpiHistory={kpiHistory}
               outputCount={stats.outputCount}
               recentMediaCount={stats.recentMediaCount}
+              meSummary={meSummary}
             />
           );
         })}

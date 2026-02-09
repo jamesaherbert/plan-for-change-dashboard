@@ -19,11 +19,16 @@ export default function MilestoneBriefing({
   return (
     <div className="bg-white rounded-xl border border-[var(--border)] p-5">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-base font-semibold text-[var(--foreground)]">
-          Milestone Briefing
-        </h3>
+        <div>
+          <h3 className="text-base font-semibold text-[var(--foreground)]">
+            AI Analysis
+          </h3>
+          <p className="text-xs text-[var(--muted)]">
+            Generated from dashboard data
+          </p>
+        </div>
         <span className="text-xs text-[var(--muted)]">
-          AI-generated {formatDate(generatedAt)}
+          {formatDate(generatedAt)}
         </span>
       </div>
       <div className="space-y-4">

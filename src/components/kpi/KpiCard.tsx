@@ -9,6 +9,7 @@ interface KpiCardProps {
   kpiHistory: KpiSnapshot[];
   outputCount: number;
   recentMediaCount: number;
+  meSummary?: { delivered: number; total: number; atRisk: number };
 }
 
 /**
@@ -71,6 +72,7 @@ export default function KpiCard({
   kpiHistory,
   outputCount,
   recentMediaCount,
+  meSummary,
 }: KpiCardProps) {
   const currentValue = latestKpi?.value;
   const hasData = currentValue !== undefined;
@@ -130,6 +132,44 @@ export default function KpiCard({
           <span>{recentMediaCount} articles</span>
         </div>
       </div>
+
+      {/* M&E Delivery Progress */}
+      {meSummary && meSummary.total > 0 && (
+        <div className="mt-2.5 pt-2.5 border-t border-[var(--border)]">
+          <div className="flex items-center justify-between mb-1">
+            <span className="text-xs text-[var(--muted)]">
+              {meSummary.delivered}/{meSummary.total} commitments delivered
+            </span>
+            {meSummary.atRisk > 0 && (
+              <span className="text-xs text-amber-600 font-medium">
+                {meSummary.atRisk} at risk
+              </span>
+            )}
+          </div>
+          <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden">
+            <div className="h-full flex">
+              {meSummary.delivered > 0 && (
+                <div
+                  className="bg-green-500 h-full"
+                  style={{ width: `${(meSummary.delivered / meSummary.total) * 100}%` }}
+                />
+              )}
+              {(meSummary.total - meSummary.delivered - meSummary.atRisk) > 0 && (
+                <div
+                  className="bg-blue-300 h-full"
+                  style={{ width: `${((meSummary.total - meSummary.delivered - meSummary.atRisk) / meSummary.total) * 100}%` }}
+                />
+              )}
+              {meSummary.atRisk > 0 && (
+                <div
+                  className="bg-amber-400 h-full"
+                  style={{ width: `${(meSummary.atRisk / meSummary.total) * 100}%` }}
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {latestKpi?.label && (
         <p className="text-xs text-[var(--muted)] mt-2">

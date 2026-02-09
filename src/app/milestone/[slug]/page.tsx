@@ -18,6 +18,10 @@ import ArticleCard from "@/components/media/ArticleCard";
 import DebateItem from "@/components/parliamentary/DebateItem";
 import CommitteeCard from "@/components/parliamentary/CommitteeCard";
 import MilestoneBriefing from "@/components/milestone/MilestoneBriefing";
+import DocumentGrounding from "@/components/me/DocumentGrounding";
+import DeliveryTracker from "@/components/me/DeliveryTracker";
+import { getMEFramework } from "@/lib/me-framework";
+import { enrichDeliverables } from "@/lib/me-matching";
 
 export function generateStaticParams() {
   return MILESTONE_SLUGS.map((slug) => ({ slug }));
@@ -194,12 +198,35 @@ export default async function MilestonePage({
 
   const generalMedia = mediaArticles.filter((a) => !a.outputId);
 
+  // M&E Framework: compute delivery status from document commitments
+  const meFramework = getMEFramework(slug as MilestoneSlug);
+  const meView = meFramework
+    ? enrichDeliverables(meFramework, outputs, mediaArticles)
+    : undefined;
+
   return (
     <div className="p-6 max-w-5xl">
       {/* Panel 1: KPI Status */}
       <KpiDetail milestone={milestone} kpiHistory={kpiHistory} />
 
-      {/* AI Briefing */}
+      {/* M&E Grounding — from the actual Plan for Change document */}
+      {meFramework && (
+        <div className="mt-6">
+          <DocumentGrounding
+            framework={meFramework}
+            latestKpiValue={kpiHistory.length > 0 ? kpiHistory[kpiHistory.length - 1].value : undefined}
+          />
+        </div>
+      )}
+
+      {/* Delivery Tracker — are commitments being delivered? */}
+      {meView && (
+        <div className="mt-6">
+          <DeliveryTracker meView={meView} />
+        </div>
+      )}
+
+      {/* AI Analysis */}
       {briefing && (
         <div className="mt-6">
           <MilestoneBriefing

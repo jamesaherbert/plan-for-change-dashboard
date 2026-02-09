@@ -155,6 +155,107 @@ export interface MilestoneMapping {
   legislationSearchTerms: string[];
 }
 
+// M&E Framework types — grounded in the Plan for Change document
+
+export type DeliverableCategory =
+  | "legislation"
+  | "strategy"
+  | "policy"
+  | "funding"
+  | "investment"
+  | "infrastructure"
+  | "workforce"
+  | "planning"
+  | "institution"
+  | "procurement"
+  | "reform"
+  | "capacity"
+  | "operational"
+  | "accountability"
+  | "childcare"
+  | "nurseries"
+  | "family-support"
+  | "education"
+  | "skills"
+  | "employment"
+  | "innovation"
+  | "efficiency"
+  | "transport"
+  | "new-towns"
+  | "environment";
+
+export type DeliverableStatus =
+  | "not-started"
+  | "in-progress"
+  | "delivered"
+  | "at-risk";
+
+export interface BaselineMetric {
+  label: string;
+  value: number | null;
+  unit: string;
+  note?: string;
+}
+
+export interface MEBaseline {
+  description: string;
+  date: string;
+  metrics: BaselineMetric[];
+}
+
+export interface METarget {
+  description: string;
+  value: number | null;
+  unit: string;
+  date: string;
+  note?: string;
+}
+
+export interface METrajectory {
+  description: string;
+  annualRateNeeded: number | null;
+  note?: string;
+}
+
+export interface MEDeliverable {
+  id: string;
+  commitment: string;
+  expectedDate: string;
+  category: DeliverableCategory;
+  searchTerms: string[];
+}
+
+export interface MEFramework {
+  slug: MilestoneSlug;
+  documentSource: string;
+  baseline: MEBaseline;
+  target: METarget;
+  requiredTrajectory: METrajectory;
+  mission: string;
+  theoryOfChange: string;
+  pillars: string[];
+  deliverables: MEDeliverable[];
+}
+
+export type EvidenceStrength = "strong" | "moderate" | "weak" | "none";
+
+export interface EnrichedDeliverable extends MEDeliverable {
+  computedStatus: DeliverableStatus;
+  matchedOutputs: Output[];
+  matchedMedia: MediaArticle[];
+  evidenceStrength: EvidenceStrength;
+}
+
+export interface MEMilestoneView {
+  framework: MEFramework;
+  enrichedDeliverables: EnrichedDeliverable[];
+  deliveredCount: number;
+  inProgressCount: number;
+  notStartedCount: number;
+  atRiskCount: number;
+  overallProgress: number; // 0-100 percentage
+}
+
 // Dashboard view models
 export interface MilestoneOverview {
   milestone: Milestone;
